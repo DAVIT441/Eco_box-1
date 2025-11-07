@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* EcoBox Design System - Ecological Education Platform for Georgian Schools */
+
+@layer base {
+  :root {
+    /* Core Background & Foreground */
+    --background: 120 20% 98%;
+    --foreground: 160 25% 15%;
+
+    /* Card Components */
+    --card: 120 30% 97%;
+    --card-foreground: 160 25% 15%;
+
+    /* Popover Components */
+    --popover: 120 30% 97%;
+    --popover-foreground: 160 25% 15%;
+
+    /* Primary - Deep Forest Green */
+    --primary: 150 60% 25%;
+    --primary-foreground: 120 30% 97%;
+    --primary-hover: 150 60% 20%;
+    --primary-light: 150 50% 85%;
+
+    /* Secondary - Sky Blue */
+    --secondary: 200 70% 88%;
+    --secondary-foreground: 200 90% 20%;
+    --secondary-hover: 200 70% 82%;
+    --secondary-dark: 200 90% 20%;
+
+    /* Accent - Bright Lime Green */
+    --accent: 80 85% 65%;
+    --accent-foreground: 160 25% 15%;
+    --accent-hover: 80 85% 60%;
+    --accent-light: 80 60% 90%;
+
+    /* Success - Nature Green */
+    --success: 140 70% 45%;
+    --success-foreground: 120 30% 97%;
+    --success-light: 140 60% 90%;
+
+    /* Warning - Earth Orange */
+    --warning: 35 85% 55%;
+    --warning-foreground: 120 30% 97%;
+    --warning-light: 35 70% 90%;
+
+    /* Muted & Border */
+    --muted: 120 20% 92%;
+    --muted-foreground: 160 15% 45%;
+    --border: 120 20% 88%;
+    --input: 120 20% 92%;
+    --ring: 150 60% 25%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(150, 60%, 25%) 0%, hsl(140, 70%, 35%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(200, 70%, 60%) 0%, hsl(180, 80%, 70%) 100%);
+    --gradient-eco: linear-gradient(135deg, hsl(80, 85%, 65%) 0%, hsl(150, 60%, 45%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(150, 60%, 25%) 0%, hsl(200, 70%, 40%) 50%, hsl(80, 85%, 55%) 100%);
+
+    /* Shadows */
+    --shadow-eco: 0 10px 30px -10px hsl(150 60% 25% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(150 60% 25% / 0.1);
+    --shadow-glow: 0 0 40px hsl(80 85% 65% / 0.4);
+
+    /* Animation Timings */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 120 30% 97%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Dark Mode - Forest Night Theme */
+    --background: 160 25% 8%;
+    --foreground: 120 30% 95%;
+
+    --card: 160 20% 12%;
+    --card-foreground: 120 30% 95%;
+
+    --popover: 160 20% 12%;
+    --popover-foreground: 120 30% 95%;
+
+    --primary: 150 55% 55%;
+    --primary-foreground: 160 25% 8%;
+    --primary-hover: 150 55% 60%;
+    --primary-light: 150 40% 25%;
+
+    --secondary: 200 30% 25%;
+    --secondary-foreground: 200 70% 85%;
+    --secondary-hover: 200 30% 30%;
+    --secondary-dark: 200 60% 70%;
+
+    --accent: 80 70% 55%;
+    --accent-foreground: 160 25% 8%;
+    --accent-hover: 80 70% 50%;
+    --accent-light: 80 40% 20%;
+
+    --success: 140 60% 50%;
+    --success-foreground: 160 25% 8%;
+    --success-light: 140 40% 20%;
+
+    --warning: 35 75% 50%;
+    --warning-foreground: 160 25% 8%;
+    --warning-light: 35 50% 20%;
+
+    --muted: 160 15% 18%;
+    --muted-foreground: 160 10% 65%;
+    --border: 160 15% 20%;
+    --input: 160 15% 18%;
+    --ring: 150 55% 55%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(150, 55%, 35%) 0%, hsl(140, 60%, 45%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(200, 40%, 35%) 0%, hsl(180, 50%, 45%) 100%);
+    --gradient-eco: linear-gradient(135deg, hsl(80, 70%, 45%) 0%, hsl(150, 55%, 35%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(150, 55%, 35%) 0%, hsl(200, 40%, 35%) 50%, hsl(80, 70%, 45%) 100%);
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 120 30% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
